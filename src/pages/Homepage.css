@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper-half {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #ff6347; /* Tomato color */
+}
+
+.lower-half {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #4682b4; /* SteelBlue color */
+}
+
+.centered-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circular-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}

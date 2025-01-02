@@ -1,0 +1,22 @@
+type Result_1 = 
+ variant {
+   err: text;
+   ok: record {
+         amount: nat;
+         rewards: nat;
+         startTime: int;
+       };
+ };
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type CLOUTSTAKING = 
+ service {
+   claim_rewards: () -> (Result);
+   get_user_stake_info: (principal) -> (Result_1);
+   stake_tokens: (nat) -> (Result);
+   unstake_tokens: () -> (Result);
+ };
+service : () -> CLOUTSTAKING

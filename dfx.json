@@ -1,0 +1,19 @@
+{
+    "canisters": {
+      "cloutstake": {
+        "main": "backend/main.mo",
+        "type": "motoko"
+      },
+      "frontend": {
+        "source": ["dist","src/assets"],
+        "type": "assets"
+      }
+    },
+    "defaults": {
+      "build": {
+        "args": "",
+        "packtool": "mops sources"
+      }
+    },
+    "version": 1
+  }
