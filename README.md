@@ -1,8 +1,11 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+// #151719  background page
+//#0f1318 card color
+//#1a2028 small card color
+//#020202 button color
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+{/* {stakedStartTime && (
+          <button className="bg-[#020202] text-white p-2 rounded">
+            <Countdown date={START_TIME}>Claim</Countdown>
+          </button>
+        )} */}

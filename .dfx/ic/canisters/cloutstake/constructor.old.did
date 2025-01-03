@@ -1,3 +1,36 @@
+type RewardHistory = 
+ record {
+   amount: nat;
+   rewardTime: int;
+ };
+type Result_3 = 
+ variant {
+   err: text;
+   ok: vec RewardHistory;
+ };
+type Result_2 = 
+ variant {
+   err: text;
+   ok: record {
+         amount: nat;
+         rewards: nat;
+         startTime: int;
+       };
+ };
+type Result_1 = 
+ variant {
+   err: text;
+   ok;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: text;
+ };
 service : {
-  name: (text) -> ();
+  claim_rewards: () -> (Result_1);
+  get_reward_history: (principal) -> (Result_3);
+  get_user_stake_info: (principal) -> (Result_2);
+  stake_tokens: (nat) -> (Result_1);
+  unstake_tokens: (nat) -> (Result);
 }

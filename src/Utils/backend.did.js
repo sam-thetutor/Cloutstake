@@ -17,13 +17,12 @@ export const idlFactory = ({ IDL }) => {
     'err' : IDL.Text,
   });
   const Result = IDL.Variant({ 'ok' : IDL.Text, 'err' : IDL.Text });
-  const CLOUTSTAKING = IDL.Service({
+  return IDL.Service({
     'claim_rewards' : IDL.Func([], [Result_1], []),
     'get_reward_history' : IDL.Func([IDL.Principal], [Result_3], []),
     'get_user_stake_info' : IDL.Func([IDL.Principal], [Result_2], []),
     'stake_tokens' : IDL.Func([IDL.Nat], [Result_1], []),
     'unstake_tokens' : IDL.Func([IDL.Nat], [Result], []),
   });
-  return CLOUTSTAKING;
 };
 export const init = ({ IDL }) => { return []; };

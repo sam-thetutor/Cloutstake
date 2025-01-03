@@ -1,12 +1,16 @@
 type CLOUTSTAKING = service {
-  claim_rewards : () -> (Result);
-  get_user_stake_info : (principal) -> (Result_1);
-  stake_tokens : (nat) -> (Result);
-  unstake_tokens : () -> (Result);
+  claim_rewards : () -> (Result_1);
+  get_reward_history : (principal) -> (Result_3);
+  get_user_stake_info : (principal) -> (Result_2);
+  stake_tokens : (nat) -> (Result_1);
+  unstake_tokens : (nat) -> (Result);
 };
-type Result = variant { ok; err : text };
-type Result_1 = variant {
+type Result = variant { ok : text; err : text };
+type Result_1 = variant { ok; err : text };
+type Result_2 = variant {
   ok : record { startTime : int; rewards : nat; amount : nat };
   err : text;
 };
+type Result_3 = variant { ok : vec RewardHistory; err : text };
+type RewardHistory = record { rewardTime : int; amount : nat };
 service : CLOUTSTAKING
