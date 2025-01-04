@@ -6,7 +6,7 @@ import { BsCopy } from "react-icons/bs";
 import { useQuery } from "@tanstack/react-query";
 import { ClipLoader } from "react-spinners";
 
-const AccountPrincipal = () => {
+const AccountPrincipal = () => {ß
   const { data: loggedInUser } = useQuery({
     queryKey: ["loggedInUser"],
   });
@@ -25,7 +25,6 @@ const AccountPrincipal = () => {
                 18
               )}
             </span>
-
             <BsCopy
               className="cursor-pointer"
               onClick={() =>
@@ -60,5 +59,4 @@ const AccountPrincipal = () => {
     </div>
   );
 };
-
 export default AccountPrincipal;

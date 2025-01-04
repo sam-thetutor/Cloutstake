@@ -72,8 +72,10 @@ const Navbar = () => {
               <FiLogOut className="mr-2" /> Logout
             </button>
           ) : (
+            
             <button onClick={logg} className="flex hover:outline-none items-center bg-transparent border border-gray-200 text-white ">
-              Connect <FiLogIn className="ml-1" />
+              Connect
+               <FiLogIn className="ml-1" />
             </button>
           )}
         </div>
